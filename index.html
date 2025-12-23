@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AYISH STORE IPTV</title>
+
+<style>
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #020617, #0f172a);
+  font-family: system-ui, -apple-system, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #e5e7eb;
+  overflow-x: hidden;
+}
+
+/* Card with fade-in animation */
+.card {
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 16px;
+  padding: 30px;
+  max-width: 420px;
+  width: 90%;
+  box-shadow: 0 0 30px rgba(0,0,0,.6);
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 26px;
+  animation: fadeInText 1s forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+
+@keyframes fadeInText {
+  to { opacity: 1; }
+}
+
+.badge {
+  background: #22c55e;
+  color: black;
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-weight: bold;
+  font-size: 13px;
+  margin-bottom: 15px;
+  opacity: 0;
+  animation: fadeInText 1s forwards;
+  animation-delay: 0.2s;
+}
+
+p {
+  font-size: 14px;
+  color: #cbd5f5;
+  opacity: 0;
+  animation: fadeInText 1s forwards;
+  animation-delay: 0.7s;
+}
+
+a.button {
+  display: block;
+  margin-top: 12px;
+  padding: 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+a.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.shopee {
+  background: #fb923c;
+  color: black;
+}
+
+.youtube {
+  background: #ef4444;
+  color: white;
+}
+
+.footer {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #64748b;
+  opacity: 0;
+  animation: fadeInText 1s forwards;
+  animation-delay: 1s;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <div class="badge">IPTV BASIC</div>
+
+  <h1>AYISH STORE IPTV</h1>
+  <p>✔ Untuk Anda<br>
+     ✔ Update Setiap Hari<br>
+     ✔ Kualiti HD & FHD</p>
+
+  <div class="footer">
+    © 2025 AYISH STORE
+  </div>
+</div>
+
+</body>
+</html>
