@@ -20,11 +20,11 @@
     justify-content: center;
     align-items: center;
     color: #e5e7eb;
-    overflow: hidden;
+    overflow-x: hidden;
     position: relative;
   }
 
-  /* Animasi Background Digital Bergerak */
+  /* Digital Background Animation */
   .bg-animation {
     position: absolute;
     top: 0;
@@ -61,36 +61,35 @@
   }
 
   .card {
-    background: rgba(15, 23, 42, 0.65);
+    background: rgba(15, 23, 42, 0.7);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 32px;
-    padding: 30px 20px 40px 20px;
+    padding: 30px 20px;
     width: 100%;
-    max-width: 360px;
+    max-width: 380px;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
     text-align: center;
     position: relative;
     z-index: 1;
+    margin: 20px;
   }
 
-  /* Container Logo */
   .logo-container {
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 50%;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 15px auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
   }
 
   .logo-container img {
-    width: 75%;
+    width: 70%;
     height: auto;
     object-fit: contain;
   }
@@ -100,87 +99,99 @@
     color: #4ade80;
     border: 1px solid rgba(34, 197, 94, 0.3);
     display: inline-block;
-    padding: 6px 14px;
+    padding: 4px 12px;
     border-radius: 50px;
     font-weight: 700;
     font-size: 9px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
 
   h1 {
-    margin-bottom: 25px;
-    font-size: 28px;
+    font-size: 26px;
     font-weight: 900;
-    letter-spacing: -0.5px;
     background: linear-gradient(to bottom, #ffffff 40%, #94a3b8 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin-bottom: 5px;
   }
 
-  .features {
-    text-align: left;
-    margin-bottom: 30px;
+  .welcome-text {
+    font-size: 13px;
+    color: #94a3b8;
+    margin-bottom: 20px;
   }
 
-  .feature-item {
+  .payment-notice {
     background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 14px 18px;
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+    padding: 15px;
     border-radius: 16px;
-    margin-bottom: 10px;
-    font-size: 15px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .payment-notice p {
+    font-size: 11px;
+    line-height: 1.5;
     color: #cbd5f5;
+  }
+
+  .button-group {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     gap: 12px;
   }
 
-  .check-icon {
-    color: #3b82f6;
-    font-weight: bold;
-    font-size: 14px;
-  }
-
-  /* Butang dengan label baru */
   a.button {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     width: 100%;
-    padding: 18px 10px;
-    border-radius: 18px;
+    padding: 16px;
+    border-radius: 16px;
     text-decoration: none;
     font-weight: 800;
-    font-size: 14px; /* Dikecilkan sedikit supaya muat satu baris pada phone */
-    transition: all 0.3s ease;
-    background: #ffffff;
-    color: #020617;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    font-size: 13px;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    transition: 0.3s;
   }
 
-  .download-btn:active {
+  /* Butang Telegram */
+  .telegram-btn {
+    background: #0088cc;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 136, 204, 0.3);
+  }
+
+  .telegram-btn:hover {
+    background: #0099e6;
+    transform: translateY(-2px);
+  }
+
+  /* Butang Download */
+  .download-btn {
+    background: #ffffff;
+    color: #020617;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+  }
+
+  .button:active {
     transform: scale(0.97);
   }
 
   .footer {
-    margin-top: 30px;
-    font-size: 11px;
+    margin-top: 25px;
+    font-size: 10px;
     color: #64748b;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
+    letter-spacing: 1px;
   }
 
-  .fade-up {
-    animation: fadeInUp 0.8s ease-out forwards;
-  }
-
+  .fade-up { animation: fadeInUp 0.8s ease-out forwards; }
   @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
+    from { opacity: 0; transform: translateY(15px); }
     to { opacity: 1; transform: translateY(0); }
   }
 </style>
@@ -201,31 +212,31 @@
     <div class="badge">IPTV CHANNEL AND MOVIES</div>
 
     <h1>AYISH DIGITAL</h1>
-    
-    <div class="features">
-      <div class="feature-item">
-        <span class="check-icon">✓</span> 
-        <span><strong>Premium</strong> Service</span>
-      </div>
-      <div class="feature-item">
-        <span class="check-icon">✓</span> 
-        <span>Update Setiap Hari</span>
-      </div>
-      <div class="feature-item">
-        <span class="check-icon">✓</span> 
-        <span>Kualiti HD & FHD</span>
-      </div>
+    <p class="welcome-text">Welcome to Ayish Digital Store</p>
+
+    <div class="payment-notice">
+      <p>If you're interested in using our OTT provider service, payment can be made through the Telegram platform. Your account will be activated immediately after payment confirmation.</p>
     </div>
 
-    <!-- Butang dikemaskini -->
-    <a href="http://link.ayishstore.com/app" class="button download-btn">
-      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-        <polyline points="7 10 12 15 17 10"></polyline>
-        <line x1="12" y1="15" x2="12" y2="3"></line>
-      </svg>
-      Download Apps OTT Premium
-    </a>
+    <div class="button-group">
+      <!-- Butang Telegram Baru -->
+      <a href="https://t.me/Ayish_Digital" class="button telegram-btn">
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.11.02-1.93 1.23-5.46 3.62-.51.35-.98.52-1.4.51-.46-.01-1.35-.26-2.01-.48-.81-.27-1.45-.42-1.39-.89.03-.24.37-.48 1.02-.73 4-1.74 6.67-2.88 8.01-3.43 3.81-1.56 4.6-1.83 5.12-1.84.11 0 .37.03.54.17.14.11.18.27.2.37-.01.07-.01.15-.02.24z"/>
+        </svg>
+        Get Premium Access
+      </a>
+
+      <!-- Butang Download -->
+      <a href="http://link.ayishstore.com/app" class="button download-btn">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        Download Apps OTT Premium
+      </a>
+    </div>
 
     <div class="footer">
       EST. 2026 • AYISH DIGITAL
